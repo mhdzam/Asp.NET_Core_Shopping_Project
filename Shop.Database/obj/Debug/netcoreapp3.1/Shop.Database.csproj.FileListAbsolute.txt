@@ -1,0 +1,12 @@
+C:\Users\intel\source\repos\Shop\Shop.Database\obj\Debug\netcoreapp3.1\Shop.Database.csprojAssemblyReference.cache
+C:\Users\intel\source\repos\Shop\Shop.Database\obj\Debug\netcoreapp3.1\Shop.Database.AssemblyInfoInputs.cache
+C:\Users\intel\source\repos\Shop\Shop.Database\obj\Debug\netcoreapp3.1\Shop.Database.AssemblyInfo.cs
+C:\Users\intel\source\repos\Shop\Shop.Database\obj\Debug\netcoreapp3.1\Shop.Database.csproj.CoreCompileInputs.cache
+C:\Users\intel\source\repos\Shop\Shop.Database\bin\Debug\netcoreapp3.1\Shop.Database.deps.json
+C:\Users\intel\source\repos\Shop\Shop.Database\bin\Debug\netcoreapp3.1\Shop.Database.dll
+C:\Users\intel\source\repos\Shop\Shop.Database\bin\Debug\netcoreapp3.1\Shop.Database.pdb
+C:\Users\intel\source\repos\Shop\Shop.Database\bin\Debug\netcoreapp3.1\Shop.Domain.dll
+C:\Users\intel\source\repos\Shop\Shop.Database\bin\Debug\netcoreapp3.1\Shop.Domain.pdb
+C:\Users\intel\source\repos\Shop\Shop.Database\obj\Debug\netcoreapp3.1\Shop.Database.csproj.CopyComplete
+C:\Users\intel\source\repos\Shop\Shop.Database\obj\Debug\netcoreapp3.1\Shop.Database.dll
+C:\Users\intel\source\repos\Shop\Shop.Database\obj\Debug\netcoreapp3.1\Shop.Database.pdb

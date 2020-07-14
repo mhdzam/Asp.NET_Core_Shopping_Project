@@ -1747,21 +1747,6 @@
           "lib/netstandard1.3/System.Xml.XDocument.dll": {}
         }
       },
-      "Shop.Database/1.0.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v3.1",
-        "dependencies": {
-          "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "2.1.0",
-          "Microsoft.EntityFrameworkCore": "2.1.0",
-          "Shop.Domain": "1.0.0"
-        },
-        "compile": {
-          "bin/placeholder/Shop.Database.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/Shop.Database.dll": {}
-        }
-      },
       "Shop.Domain/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v3.1",
@@ -5857,11 +5842,6 @@
         "system.xml.xdocument.nuspec"
       ]
     },
-    "Shop.Database/1.0.0": {
-      "type": "project",
-      "path": "../Shop.Database/Shop.Database.csproj",
-      "msbuildProject": "../Shop.Database/Shop.Database.csproj"
-    },
     "Shop.Domain/1.0.0": {
       "type": "project",
       "path": "../Shop.Domain/Shop.Domain.csproj",
@@ -5870,7 +5850,9 @@
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v3.1": [
-      "Shop.Database >= 1.0.0"
+      "Microsoft.AspNetCore.Identity.EntityFrameworkCore >= 2.1.0",
+      "Microsoft.EntityFrameworkCore >= 2.1.0",
+      "Shop.Domain >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -5880,11 +5862,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\intel\\source\\repos\\Shop\\Shop.Application\\Shop.Application.csproj",
-      "projectName": "Shop.Application",
-      "projectPath": "C:\\Users\\intel\\source\\repos\\Shop\\Shop.Application\\Shop.Application.csproj",
+      "projectUniqueName": "C:\\Users\\intel\\source\\repos\\Shop\\Shop.Database\\Shop.Database.csproj",
+      "projectName": "Shop.Database",
+      "projectPath": "C:\\Users\\intel\\source\\repos\\Shop\\Shop.Database\\Shop.Database.csproj",
       "packagesPath": "C:\\Users\\intel\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\intel\\source\\repos\\Shop\\Shop.Application\\obj\\",
+      "outputPath": "C:\\Users\\intel\\source\\repos\\Shop\\Shop.Database\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -5903,8 +5885,8 @@
       "frameworks": {
         "netcoreapp3.1": {
           "projectReferences": {
-            "C:\\Users\\intel\\source\\repos\\Shop\\Shop.Database\\Shop.Database.csproj": {
-              "projectPath": "C:\\Users\\intel\\source\\repos\\Shop\\Shop.Database\\Shop.Database.csproj"
+            "C:\\Users\\intel\\source\\repos\\Shop\\Shop.Domain\\Shop.Domain.csproj": {
+              "projectPath": "C:\\Users\\intel\\source\\repos\\Shop\\Shop.Domain\\Shop.Domain.csproj"
             }
           }
         }
@@ -5917,6 +5899,16 @@
     },
     "frameworks": {
       "netcoreapp3.1": {
+        "dependencies": {
+          "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
+            "target": "Package",
+            "version": "[2.1.0, )"
+          },
+          "Microsoft.EntityFrameworkCore": {
+            "target": "Package",
+            "version": "[2.1.0, )"
+          }
+        },
         "imports": [
           "net461",
           "net462",
