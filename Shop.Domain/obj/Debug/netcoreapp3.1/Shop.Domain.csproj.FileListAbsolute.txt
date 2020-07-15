@@ -6,3 +6,4 @@ C:\Users\intel\source\repos\Shop\Shop.Domain\obj\Debug\netcoreapp3.1\Shop.Domain
 C:\Users\intel\source\repos\Shop\Shop.Domain\obj\Debug\netcoreapp3.1\Shop.Domain.csproj.CoreCompileInputs.cache
 C:\Users\intel\source\repos\Shop\Shop.Domain\obj\Debug\netcoreapp3.1\Shop.Domain.dll
 C:\Users\intel\source\repos\Shop\Shop.Domain\obj\Debug\netcoreapp3.1\Shop.Domain.pdb
+C:\Users\intel\source\repos\Shop\Shop.Domain\obj\Debug\netcoreapp3.1\Shop.Domain.csprojAssemblyReference.cache

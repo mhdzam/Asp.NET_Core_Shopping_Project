@@ -4,14 +4,158 @@
     "C:\\Users\\intel\\source\\repos\\Shop\\ShopUI\\ShopUI.csproj": {}
   },
   "projects": {
-    "C:\\Users\\intel\\source\\repos\\Shop\\ShopUI\\ShopUI.csproj": {
+    "C:\\Users\\intel\\source\\repos\\Shop\\Shop.Application\\Shop.Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\intel\\source\\repos\\Shop\\ShopUI\\ShopUI.csproj",
-        "projectName": "ShopUI",
-        "projectPath": "C:\\Users\\intel\\source\\repos\\Shop\\ShopUI\\ShopUI.csproj",
+        "projectUniqueName": "C:\\Users\\intel\\source\\repos\\Shop\\Shop.Application\\Shop.Application.csproj",
+        "projectName": "Shop.Application",
+        "projectPath": "C:\\Users\\intel\\source\\repos\\Shop\\Shop.Application\\Shop.Application.csproj",
         "packagesPath": "C:\\Users\\intel\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\intel\\source\\repos\\Shop\\ShopUI\\obj\\",
+        "outputPath": "C:\\Users\\intel\\source\\repos\\Shop\\Shop.Application\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\intel\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "projectReferences": {
+              "C:\\Users\\intel\\source\\repos\\Shop\\Shop.Database\\Shop.Database.csproj": {
+                "projectPath": "C:\\Users\\intel\\source\\repos\\Shop\\Shop.Database\\Shop.Database.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.301\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\intel\\source\\repos\\Shop\\Shop.Database\\Shop.Database.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\intel\\source\\repos\\Shop\\Shop.Database\\Shop.Database.csproj",
+        "projectName": "Shop.Database",
+        "projectPath": "C:\\Users\\intel\\source\\repos\\Shop\\Shop.Database\\Shop.Database.csproj",
+        "packagesPath": "C:\\Users\\intel\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\intel\\source\\repos\\Shop\\Shop.Database\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\intel\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "projectReferences": {
+              "C:\\Users\\intel\\source\\repos\\Shop\\Shop.Domain\\Shop.Domain.csproj": {
+                "projectPath": "C:\\Users\\intel\\source\\repos\\Shop\\Shop.Domain\\Shop.Domain.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "dependencies": {
+            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[3.1.6, )"
+            },
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[3.1.6, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[3.1.6, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[3.1.6, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[3.1.6, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.301\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\intel\\source\\repos\\Shop\\Shop.Domain\\Shop.Domain.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\intel\\source\\repos\\Shop\\Shop.Domain\\Shop.Domain.csproj",
+        "projectName": "Shop.Domain",
+        "projectPath": "C:\\Users\\intel\\source\\repos\\Shop\\Shop.Domain\\Shop.Domain.csproj",
+        "packagesPath": "C:\\Users\\intel\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\intel\\source\\repos\\Shop\\Shop.Domain\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -40,6 +184,87 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.301\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\intel\\source\\repos\\Shop\\ShopUI\\ShopUI.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\intel\\source\\repos\\Shop\\ShopUI\\ShopUI.csproj",
+        "projectName": "ShopUI",
+        "projectPath": "C:\\Users\\intel\\source\\repos\\Shop\\ShopUI\\ShopUI.csproj",
+        "packagesPath": "C:\\Users\\intel\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\intel\\source\\repos\\Shop\\ShopUI\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\intel\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "projectReferences": {
+              "C:\\Users\\intel\\source\\repos\\Shop\\Shop.Application\\Shop.Application.csproj": {
+                "projectPath": "C:\\Users\\intel\\source\\repos\\Shop\\Shop.Application\\Shop.Application.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[3.1.6, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[3.1.6, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[3.1.6, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[3.1.6, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
