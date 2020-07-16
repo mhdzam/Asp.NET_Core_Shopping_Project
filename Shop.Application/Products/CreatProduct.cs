@@ -4,10 +4,11 @@ using System;
 using System.Collections.Generic;
 using System.Dynamic;
 using System.Text;
+using System.Threading.Tasks;
 
 namespace Shop.Application.Products
 {
-    class CreatProduct
+  public  class CreatProduct
     {
         private ApplicationDbContext _context;
 
@@ -16,10 +17,10 @@ namespace Shop.Application.Products
             _context = Context;
         }
 
-        public void Do(Product _product)
+        public async Task Do(string _Description, string _Name, decimal _Value)
         {
-            _context.Add(_product);
-            _context.SaveChanges();
+            _context.Add(new Product() { Name=_Name, Description= _Description , Value = _Value});
+           await _context.SaveChangesAsync();
         }
     }
 }
