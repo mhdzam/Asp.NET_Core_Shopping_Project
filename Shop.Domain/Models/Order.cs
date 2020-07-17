@@ -12,5 +12,7 @@ namespace Shop.Domain.Models
         public string Address2 { set; get; }
         public string City { get; set; }
         public string PostalCode { get; set; }
+
+        public ICollection<OrderProduct> OrderProduct { get; set; }
     }
 }
