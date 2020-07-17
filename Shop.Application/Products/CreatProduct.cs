@@ -6,7 +6,7 @@ using System.Dynamic;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Shop.Application.Products
+namespace Shop.Application.CreateProducts
 {
   public  class CreatProduct
     {
@@ -17,10 +17,18 @@ namespace Shop.Application.Products
             _context = Context;
         }
 
-        public async Task Do(string _Description, string _Name, decimal _Value)
+        public async Task Do(ProductViewModel _product)
         {
-            _context.Add(new Product() { Name=_Name, Description= _Description , Value = _Value});
+            _context.Add(new Product() { Name= _product.Name, Description= _product.Description, Value = _product.Value });
            await _context.SaveChangesAsync();
         }
+    }
+
+
+    public class ProductViewModel
+    {
+        public string Name { get; set; }
+        public string Description { get; set; }
+        public decimal Value { get; set; }
     }
 }
