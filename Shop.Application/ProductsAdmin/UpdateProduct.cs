@@ -16,14 +16,23 @@ namespace Shop.Application.ProductsAdmin
             _ctx = ctx;
         }
 
-        public async Task Do(ProductViewModel product)
+        public async Task<bool> Do(Request request)
         {
-            _ctx.Products.Update(new Domain.Models.Product() { Description = product.Description, Id=product.Id, Name=product.Name, Value = product.Value});
+            _ctx.Products.Update(new Domain.Models.Product() { Description = request.Description, Name= request.Name});
             await _ctx.SaveChangesAsync();
+            return true;
         }
 
-        public class ProductViewModel
+        public class Request
         {
+            public string Name { get; set; }
+            public string Description { get; set; }
+            public string Value { get; set; }
+        }
+
+        public class response
+        {
+
             public int Id { get; set; }
             public string Name { get; set; }
             public string Description { get; set; }

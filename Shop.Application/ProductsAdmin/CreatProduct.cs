@@ -17,14 +17,32 @@ namespace Shop.Application.ProductsAdmin
             _context = Context;
         }
 
-        public async Task Do(ProductViewModel _product)
+        public async Task<response> Do(Request Request)
         {
-            _context.Add(new Product() { Name= _product.Name, Description= _product.Description, Value = _product.Value });
+          var product =  new Product() { Name = Request.Name, Description = Request.Description, Value = decimal.Parse(Request.Value) };
+            _context.Add(product);
            await _context.SaveChangesAsync();
+
+            return new response()
+            {
+                Id = product.Id,
+                Description = product.Description,
+                Name = product.Name,
+                Value = product.Value
+            };
         }
 
-        public class ProductViewModel
+        public class Request
         {
+            public string Name { get; set; }
+            public string Description { get; set; }
+            public string Value { get; set; }
+        }
+
+        public class response
+        {
+
+            public int Id { get; set; }
             public string Name { get; set; }
             public string Description { get; set; }
             public decimal Value { get; set; }

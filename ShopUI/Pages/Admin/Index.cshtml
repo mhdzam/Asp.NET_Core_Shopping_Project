@@ -1,0 +1,30 @@
+﻿@page
+@model ShopUI.Pages.Admin.IndexModel
+@{
+}
+
+    <div id="app">
+        <button v-on:click="getproducts">Get Products</button>
+       
+        <div>
+            <p v-for="product in products">
+                {{product.id}} - {{product.name}} - {{product.description}} - {{product.value}}
+            </p>
+        </div>
+
+        <div>
+            <input v-model="productModel.Name" />
+            <input v-model="productModel.Description" />
+            <input v-model="productModel.Value" />
+            <p>{{productModel.Name}}</p>
+            <p>{{productModel.Description}}</p>
+            <p>{{productModel.Value}}</p>
+            <button v-on:click="createProduct">Create Product</button>
+        </div>
+    </div>
+
+@section scripts{
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+<script src="~/js/Admin/main.js"></script>
+}

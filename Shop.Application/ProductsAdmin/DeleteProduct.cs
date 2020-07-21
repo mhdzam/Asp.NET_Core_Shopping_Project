@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection.Metadata.Ecma335;
 using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
@@ -17,12 +18,14 @@ namespace Shop.Application.ProductsAdmin
             _ctx = ctx;
         }
 
-        public async Task Do (int Id)
+        public async Task<bool> Do (int Id)
         {
             var product = _ctx.Products.FirstOrDefault(X => X.Id == Id);
             _ctx.Products.Remove(product);
             await _ctx.SaveChangesAsync();
+            return true;
         }
+        
 
         public class ProductViewModel
         {

@@ -79,3 +79,4 @@ C:\Users\intel\source\repos\Shop\ShopUI\bin\Debug\netcoreapp3.1\Microsoft.Extens
 C:\Users\intel\source\repos\Shop\ShopUI\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Identity.Stores.dll
 C:\Users\intel\source\repos\Shop\ShopUI\obj\Debug\netcoreapp3.1\ShopUI.csproj.CoreCompileInputs.cache
 C:\Users\intel\source\repos\Shop\ShopUI\obj\Debug\netcoreapp3.1\ShopUI.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\intel\source\repos\Shop\ShopUI\obj\Debug\netcoreapp3.1\Razor\Pages\Admin\Index.cshtml.g.cs

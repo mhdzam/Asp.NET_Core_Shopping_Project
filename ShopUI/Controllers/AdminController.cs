@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace ShopUI.Controllers
 {
-    [Route("[Controller]")]
+    [Route("[controller]")]
     public class AdminController : Controller
     {
         private ApplicationDbContext _ctx;
@@ -22,21 +22,21 @@ namespace ShopUI.Controllers
         public IActionResult GetProducts() =>
             Ok( new GetProducts(_ctx).Do());
 
-        [HttpGet("Products/(Id")]
+        [HttpGet("Products/{id}")]
         public IActionResult GetProduct(int Id) =>
            Ok(new GetProduct(_ctx).Do(Id));
 
-        [HttpPost("Products")]
-        public IActionResult UpdateProduct(UpdateProduct.ProductViewModel product) =>
-           Ok(new UpdateProduct(_ctx).Do(product));
-
-
         [HttpPut("Products")]
-        public IActionResult CreateProducts(CreatProduct.ProductViewModel product) =>
-           Ok(new CreatProduct(_ctx).Do(product));
+        public async Task<IActionResult> UpdateProduct([FromBody] UpdateProduct.Request product) =>
+           Ok(await new UpdateProduct(_ctx).Do(product));
 
-        [HttpDelete("Products/(Id)")]
-        public IActionResult DeleteProduct(int Id) =>
-           Ok(new DeleteProduct(_ctx).Do(Id));
+
+        [HttpPost("Product")]
+        public async Task<IActionResult> CreateProduct([FromBody] CreatProduct.Request request) =>
+           Ok(await new CreatProduct(_ctx).Do(request));
+
+        [HttpDelete("Product/{id}")]
+        public async Task<IActionResult> DeleteProduct(int Id) =>
+           Ok(await new DeleteProduct(_ctx).Do(Id));
     }
 }
