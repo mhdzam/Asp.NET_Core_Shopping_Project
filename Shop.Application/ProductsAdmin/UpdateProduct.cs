@@ -21,7 +21,7 @@ namespace Shop.Application.ProductsAdmin
         {
             var _product = _ctx.Products.FirstOrDefault(X => X.Id == request.Id);
             _product.Name = request.Name;
-            _product.Value = request.Value;
+            _product.Value =request.Value;
             _product.Description = request.Description;
             await _ctx.SaveChangesAsync();
             return new response() { 
