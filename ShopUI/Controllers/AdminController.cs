@@ -26,9 +26,9 @@ namespace ShopUI.Controllers
         public IActionResult GetProduct(int Id) =>
            Ok(new GetProduct(_ctx).Do(Id));
 
-        [HttpPut("Products")]
-        public async Task<IActionResult> UpdateProduct([FromBody] UpdateProduct.Request product) =>
-           Ok(await new UpdateProduct(_ctx).Do(product));
+        [HttpPost("updateProducts")]
+        public async Task<IActionResult> UpdateProduct([FromBody] UpdateProduct.Request request) =>
+           Ok(await new UpdateProduct(_ctx).Do(request));
 
 
         [HttpPost("Product")]
