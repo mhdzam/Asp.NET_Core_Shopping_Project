@@ -1,0 +1,61 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - ShopUI</title>
+
+    <environemnt include="Development">
+        <link href="~/lib/bulma-0.9.0/css/bulma.css" rel="stylesheet" />
+        <link rel="stylesheet" href="~/css/site.css" />
+    </environemnt>
+    <environemnt include="Productio">
+
+        <link href="~/lib/bulma-0.9.0/css/bulma.min.css" rel="stylesheet" />
+    </environemnt>
+</head>
+<body>
+    <header>
+        <h1 class="has-text-centered">Admin Panel</h1>
+    </header>
+    <div class="container">
+        <div class="columns">
+            <div class="column is-3">
+                <div class="menu">
+                    <div class="menu-label">
+                        <p class="menu-label"> Admin Menu</p>
+                        <ul class="menu-list">
+                            <li><a asp-page="/Admin/Index">Products</a></li>
+                            <li><a asp-page="/Admin/Orders">Orders</a></li>
+                            <li><a asp-page="/Admin/Stock">Stock</a></li>
+                        </ul>
+
+                        <p class="menu-label"></p>
+                        <ul class="menu-list">
+                            <li>        <a class="nav-link text-dark" asp-area="" asp-page="/Index">Back To Main</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class=" column is-9">
+
+                @RenderBody()
+
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <footer class="border-top footer text-muted">
+        <div class="container">
+            &copy; 2020 - ShopUI - <a asp-area="" asp-page="/Privacy">Privacy</a>
+        </div>
+    </footer>
+
+
+
+    @RenderSection("Scripts", required: false)
+</body>
+</html>
