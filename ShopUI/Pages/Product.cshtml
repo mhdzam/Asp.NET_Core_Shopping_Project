@@ -1,0 +1,22 @@
+﻿@page "{name}"
+@model ShopUI.Pages.ProductModel
+@{
+    ViewData["Title"] = "Product";
+}
+
+<h1>Product</h1>
+
+<div>
+    <p>@Model.Product.Id</p>
+    <p>@Model.Product.Name</p>
+    <p>@Model.Product.Value</p>
+    <div>
+        <label>Stock:</label>
+        <select>
+            @foreach (var stock in Model.Product.Stock)
+            {
+                <option value="@stock.Id">@stock.Description</option>
+            }
+        </select>
+    </div>
+</div>

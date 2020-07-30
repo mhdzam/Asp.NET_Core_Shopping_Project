@@ -157,3 +157,4 @@ C:\Users\intel\source\repos\Shop\ShopUI\obj\Debug\netcoreapp3.1\ShopUI.csproj.Co
 C:\Users\intel\source\repos\Shop\ShopUI\obj\Debug\netcoreapp3.1\ShopUI.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\intel\source\repos\Shop\ShopUI\obj\Debug\netcoreapp3.1\Razor\Pages\Admin\Orders.cshtml.g.cs
 C:\Users\intel\source\repos\Shop\ShopUI\obj\Debug\netcoreapp3.1\Razor\Pages\Admin\Stock.cshtml.g.cs
+C:\Users\intel\source\repos\Shop\ShopUI\obj\Debug\netcoreapp3.1\Razor\Pages\Product.cshtml.g.cs

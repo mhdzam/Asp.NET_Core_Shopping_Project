@@ -23,9 +23,11 @@
     @{
         foreach (var item in Model.products)
         {
-            <p>
+        <a asp-page="Product" asp-route-name="@item.Name">
+            
                 @item.Name - @item.Value
-            </p>
+            
+        </a>
         }
     }
 </div>
