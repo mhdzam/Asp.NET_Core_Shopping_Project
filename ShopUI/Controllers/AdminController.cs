@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Shop.Application.ProductsAdmin;
+using Shop.Application.StockAdmin;
 using Shop.Database;
 using System;
 using System.Collections.Generic;
@@ -38,5 +39,27 @@ namespace ShopUI.Controllers
         [HttpDelete("Product/{id}")]
         public async Task<IActionResult> DeleteProduct(int Id) =>
            Ok(await new DeleteProduct(_ctx).Do(Id));
+
+
+
+
+        [HttpGet("stocks")]
+        public IActionResult GetStock() =>
+    Ok(new GetStock(_ctx).Do());
+
+
+
+        [HttpPut("stock")]
+        public async Task<IActionResult> UpdateStock([FromBody] UpdateStock.Request request) =>
+           Ok(await new UpdateStock(_ctx).Do(request));
+
+
+        [HttpPost("stock")]
+        public async Task<IActionResult> CreateStock([FromBody] CreateStock.Request request) =>
+           Ok(await new CreateStock(_ctx).Do(request));
+
+        [HttpDelete("stock/{id}")]
+        public async Task<IActionResult> DeleteStock(int Id) =>
+           Ok(await new DeleteStock(_ctx).Do(Id));
     }
 }

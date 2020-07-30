@@ -7,16 +7,13 @@
 
     <environemnt include="Development">
         <link href="~/lib/bulma-0.9.0/css/bulma.css" rel="stylesheet" />
-        <link rel="stylesheet" href="~/css/site.css" />
     </environemnt>
     <environemnt include="Productio">
-
-        <link href="~/lib/bulma-0.9.0/css/bulma.min.css" rel="stylesheet" />
     </environemnt>
 </head>
 <body>
     <header>
-        <h1 class="has-text-centered">Admin Panel</h1>
+        <h1 class="titled has-text-centered">Admin Panel</h1>
     </header>
     <div class="container">
         <div class="columns">
@@ -54,7 +51,8 @@
         </div>
     </footer>
 
-
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script> 
 
     @RenderSection("Scripts", required: false)
 </body>

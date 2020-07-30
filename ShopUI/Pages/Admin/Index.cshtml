@@ -40,7 +40,7 @@
             <div class="field">
                 <label class="label"> product Value</label>
                 <div class="control">
-                    <input class="input" v-model="productModel.value" placeholder="Product Value" />
+                    <input class="input" type="number" v-model.number="productModel.value" placeholder="Product Value" />
                 </div>
             </div>
             <button class="button is-success" @@click="createProduct" v-if="!productModel.id">Create Product</button>
@@ -53,7 +53,5 @@
    
 
 @section scripts{
-    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 <script src="~/js/Admin/products.js"></script>
 }

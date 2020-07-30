@@ -4,5 +4,43 @@
     ViewData["Title"] = "Stock";
 }
 
-<h1>Stock</h1>
+<div id="app">
+    <div class="columns">
+        <div class="colmun is-3">
+            <table class="table">
+                <tr v-for="product in products" @@click="selectProduct(product)">
+                    <td>{{product.description}}</td>
+                    
+                </tr>
+            </table>
+        </div>
+        <div class="column is-6" v-if="selectedproduct">
+            <table class="table" >
+                <tr v-for="(stock,index) in selectedproduct.stock">
+                    <td> <input v-model="stock.description" /></td>
+                    <td> <input type="number" v-model.number="stock.qty" /></td>
+                    <td> <a href="#" class="button has-text-warning" @@click="deletestock(stock.id,index)"> Delete </a></td>
+                </tr>
+            </table>
+            <a class="button is-warning" @@click="updatestock">Update stocks</a>
+        </div>
 
+        <div class="column is-3">
+            <h1>new stock</h1>
+            <div class="field">
+                <div class="control">
+                    <input class="input" v-model="newStock.description" />
+                </div>
+            </div>
+            <div class="field">
+                <div class="control">
+                    <input type="number" class="input" v-model.number="newStock.qty" />
+                </div>
+            </div>
+            <a class="button is-success" @@click="AddStock">Add</a>
+        </div>
+    </div>
+</div>
+@section scripts{
+    <script src="~/js/Admin/Stocks.js"></script>
+}

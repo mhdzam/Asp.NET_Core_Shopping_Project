@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Shop.Application.StockAdmin
 {
-    class UpdateStock
+   public class UpdateStock
     {
         private ApplicationDbContext _ctx;
 
@@ -28,9 +28,9 @@ namespace Shop.Application.StockAdmin
             }
 
             _ctx.UpdateRange(stocks);
-
+           await _ctx.SaveChangesAsync();
             return new Response {
-                stock = request.stock;
+                stock = request.stock
             };
         }
 
