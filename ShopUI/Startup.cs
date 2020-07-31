@@ -11,6 +11,7 @@ using Microsoft.Extensions.Hosting;
 using Shop.Database;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Design;
+using Microsoft.Extensions.Options;
 
 namespace ShopUI
 {
@@ -28,6 +29,12 @@ namespace ShopUI
         {
             services.AddRazorPages();
             services.AddDbContext<ApplicationDbContext>(options => options.UseSqlServer(Configuration["DefaultConnection"], b => b.MigrationsAssembly("Shop.Database")));
+            services.AddSession( option =>
+            {
+                option.Cookie.Name = "card";
+                option.Cookie.MaxAge = TimeSpan.FromDays(365);
+
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -50,13 +57,16 @@ namespace ShopUI
             app.UseRouting();
 
             app.UseAuthorization();
-            
+
+            app.UseSession();
 
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapRazorPages();
                 endpoints.MapDefaultControllerRoute();
             });
+
+           
         }
     }
 }
