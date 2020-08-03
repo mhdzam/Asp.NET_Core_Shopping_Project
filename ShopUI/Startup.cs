@@ -31,7 +31,7 @@ namespace ShopUI
             services.AddDbContext<ApplicationDbContext>(options => options.UseSqlServer(Configuration["DefaultConnection"], b => b.MigrationsAssembly("Shop.Database")));
             services.AddSession( option =>
             {
-                option.Cookie.Name = "card";
+                option.Cookie.Name = "cart";
                 option.Cookie.MaxAge = TimeSpan.FromDays(365);
 
             });

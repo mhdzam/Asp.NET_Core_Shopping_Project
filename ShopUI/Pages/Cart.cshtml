@@ -1,0 +1,16 @@
+﻿@page
+@model ShopUI.Pages.CartModel
+@{
+    ViewData["Title"] = "Cart";
+}
+
+<h1>Cart</h1>
+
+
+
+<div>
+    <p>@Model.cart.Name</p>
+    <p>@Model.cart.Value</p>
+    <p>@Model.cart.Qty</p>
+    <p>@Model.cart.StockId</p>
+</div>

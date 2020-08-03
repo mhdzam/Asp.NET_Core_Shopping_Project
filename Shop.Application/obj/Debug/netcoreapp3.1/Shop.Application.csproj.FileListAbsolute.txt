@@ -8,7 +8,7 @@ C:\Users\intel\source\repos\Shop\Shop.Application\bin\Debug\netcoreapp3.1\Shop.D
 C:\Users\intel\source\repos\Shop\Shop.Application\obj\Debug\netcoreapp3.1\Shop.Application.csprojAssemblyReference.cache
 C:\Users\intel\source\repos\Shop\Shop.Application\obj\Debug\netcoreapp3.1\Shop.Application.AssemblyInfoInputs.cache
 C:\Users\intel\source\repos\Shop\Shop.Application\obj\Debug\netcoreapp3.1\Shop.Application.AssemblyInfo.cs
-C:\Users\intel\source\repos\Shop\Shop.Application\obj\Debug\netcoreapp3.1\Shop.Application.csproj.CoreCompileInputs.cache
 C:\Users\intel\source\repos\Shop\Shop.Application\obj\Debug\netcoreapp3.1\Shop.Application.csproj.CopyComplete
 C:\Users\intel\source\repos\Shop\Shop.Application\obj\Debug\netcoreapp3.1\Shop.Application.dll
 C:\Users\intel\source\repos\Shop\Shop.Application\obj\Debug\netcoreapp3.1\Shop.Application.pdb
+C:\Users\intel\source\repos\Shop\Shop.Application\obj\Debug\netcoreapp3.1\Shop.Application.csproj.CoreCompileInputs.cache

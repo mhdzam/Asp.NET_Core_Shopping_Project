@@ -153,8 +153,9 @@ C:\Users\intel\source\repos\Shop\ShopUI\bin\Debug\netcoreapp3.1\ru\Microsoft.Cod
 C:\Users\intel\source\repos\Shop\ShopUI\bin\Debug\netcoreapp3.1\tr\Microsoft.CodeAnalysis.Workspaces.resources.dll
 C:\Users\intel\source\repos\Shop\ShopUI\bin\Debug\netcoreapp3.1\zh-Hans\Microsoft.CodeAnalysis.Workspaces.resources.dll
 C:\Users\intel\source\repos\Shop\ShopUI\bin\Debug\netcoreapp3.1\zh-Hant\Microsoft.CodeAnalysis.Workspaces.resources.dll
-C:\Users\intel\source\repos\Shop\ShopUI\obj\Debug\netcoreapp3.1\ShopUI.csproj.CoreCompileInputs.cache
-C:\Users\intel\source\repos\Shop\ShopUI\obj\Debug\netcoreapp3.1\ShopUI.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\intel\source\repos\Shop\ShopUI\obj\Debug\netcoreapp3.1\Razor\Pages\Admin\Orders.cshtml.g.cs
 C:\Users\intel\source\repos\Shop\ShopUI\obj\Debug\netcoreapp3.1\Razor\Pages\Admin\Stock.cshtml.g.cs
 C:\Users\intel\source\repos\Shop\ShopUI\obj\Debug\netcoreapp3.1\Razor\Pages\Product.cshtml.g.cs
+C:\Users\intel\source\repos\Shop\ShopUI\obj\Debug\netcoreapp3.1\ShopUI.csproj.CoreCompileInputs.cache
+C:\Users\intel\source\repos\Shop\ShopUI\obj\Debug\netcoreapp3.1\ShopUI.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\intel\source\repos\Shop\ShopUI\obj\Debug\netcoreapp3.1\Razor\Pages\Cart.cshtml.g.cs
