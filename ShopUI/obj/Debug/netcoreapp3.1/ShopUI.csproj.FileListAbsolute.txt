@@ -159,3 +159,5 @@ C:\Users\intel\source\repos\Shop\ShopUI\obj\Debug\netcoreapp3.1\Razor\Pages\Prod
 C:\Users\intel\source\repos\Shop\ShopUI\obj\Debug\netcoreapp3.1\ShopUI.csproj.CoreCompileInputs.cache
 C:\Users\intel\source\repos\Shop\ShopUI\obj\Debug\netcoreapp3.1\ShopUI.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\intel\source\repos\Shop\ShopUI\obj\Debug\netcoreapp3.1\Razor\Pages\Cart.cshtml.g.cs
+C:\Users\intel\source\repos\Shop\ShopUI\obj\Debug\netcoreapp3.1\Razor\Pages\Components\Cart\Default.cshtml.g.cs
+C:\Users\intel\source\repos\Shop\ShopUI\obj\Debug\netcoreapp3.1\Razor\Pages\Components\Cart\Small.cshtml.g.cs

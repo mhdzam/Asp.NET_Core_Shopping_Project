@@ -34,8 +34,8 @@ namespace Shop.Application.Cart
             //TODO: appending the card
 
             var response = _dbx.Stock
-                .Include(X => X.Product)
-                .Where(x => cartList.Any(y => y.StockId == x.Id))
+                .Include(X => X.Product).ToList()
+                .Where(X => cartList.Any(y => y.StockId == X.Id))
                 .Select(X => new Response()
                 {
                     Name = X.Product.Name,

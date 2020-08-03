@@ -13,7 +13,7 @@
     <div>
         <form method="post">
             <label>Stock:</label>
-            
+
             <select asp-for="CartViewModel.StockId">
                 @foreach (var stock in Model.Product.Stock)
                 {
@@ -26,3 +26,5 @@
         </form>
     </div>
 </div>
+
+@await Component.InvokeAsync("Cart")
