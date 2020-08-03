@@ -15,7 +15,7 @@ namespace ShopUI.Pages
       
         private ApplicationDbContext _ctx;
 
-        public GetCart.Response cart { get; set; }
+        public IEnumerable<GetCart.Response> Cart { get; set; }
 
         public CartModel(ApplicationDbContext ctx)
         {
@@ -24,7 +24,7 @@ namespace ShopUI.Pages
 
         public IActionResult OnGet()
         {
-            cart = new GetCart(HttpContext.Session,_ctx).Do();
+            Cart = new GetCart(HttpContext.Session,_ctx).Do();
 
             return Page();
         }

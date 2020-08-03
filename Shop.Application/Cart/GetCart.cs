@@ -21,25 +21,29 @@ namespace Shop.Application.Cart
             _session = session;
         }
 
-        public Response Do()
+        public IEnumerable<Response> Do()
         {
             // account for multiple items in the cart
             var StringObject = _session.GetString("cart");
 
-            var cartRoduct =  JsonConvert.DeserializeObject<CartProduct>(StringObject);
+            if(string.IsNullOrEmpty(StringObject))
+            {
+                return new List<Response>();
+            }
+            var cartList =  JsonConvert.DeserializeObject<List<CartProduct>>(StringObject);
             //TODO: appending the card
 
             var response = _dbx.Stock
                 .Include(X => X.Product)
-                .Where(X => X.Id == cartRoduct.StockId)
+                .Where(x => cartList.Any(y => y.StockId == x.Id))
                 .Select(X => new Response()
                 {
                     Name = X.Product.Name,
-                    Qty = cartRoduct.Qty,
+                    Qty = cartList.FirstOrDefault(y => y.StockId == X.Id).Qty,
                     Value = $"{X.Product.Value.ToString("N2")}",
                     StockId = X.Id
                 })
-                .FirstOrDefault();
+                .ToList();
 
             return response;
         }
