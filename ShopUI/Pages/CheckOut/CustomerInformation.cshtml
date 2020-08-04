@@ -1,0 +1,53 @@
+﻿@page
+@model ShopUI.Pages.CheckOut.CustomerInformationModel
+@{
+    ViewData["Title"] = "CustomerInformation";
+}
+
+<h1>CustomerInformation</h1>
+
+<div>
+    <form  method="post">
+        <div>
+            <span asp-validation-for="CustomerInformation.FirstName"></span>
+            <input asp-for="CustomerInformation.FirstName" />
+        </div>
+        
+        <div>
+            <span asp-validation-for="CustomerInformation.LastName"></span>
+            <input asp-for="CustomerInformation.LastName" />
+        </div>
+
+        <div>
+            <span asp-validation-for="CustomerInformation.Email"></span>
+            <input asp-for="CustomerInformation.Email" />
+        </div>
+
+        <div>
+            <span asp-validation-for="CustomerInformation.PhoneNumber"></span>
+            <input asp-for="CustomerInformation.PhoneNumber" />
+        </div>
+
+        <div>
+            <span asp-validation-for="CustomerInformation.Address1"></span>
+            <input asp-for="CustomerInformation.Address1" />
+        </div>
+        
+        <div>
+            <input asp-for="CustomerInformation.Address2" />
+        </div>
+
+        <div>
+            <span asp-validation-for="CustomerInformation.City"></span>
+            <input asp-for="CustomerInformation.City" />
+        </div>
+
+        <div>
+            <span asp-validation-for="CustomerInformation.PostalCode"></span>
+            <input asp-for="CustomerInformation.PostalCode" />
+        </div>
+
+        <button type="submit"> Submit </button>
+   
+    </form>
+</div>
