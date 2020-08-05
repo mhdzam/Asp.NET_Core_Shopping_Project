@@ -12,6 +12,8 @@ using Shop.Database;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Design;
 using Microsoft.Extensions.Options;
+using Stripe;
+using Shop.Application.Cart;
 
 namespace ShopUI
 {
@@ -35,6 +37,10 @@ namespace ShopUI
                 option.Cookie.MaxAge = TimeSpan.FromDays(365);
 
             });
+
+
+            services.Configure<StripeSettings>(Configuration.GetSection("Stripe"));
+            
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -66,7 +72,7 @@ namespace ShopUI
                 endpoints.MapDefaultControllerRoute();
             });
 
-           
+            StripeConfiguration.ApiKey = Configuration.GetSection("Stripe")["SecretKey"];
         }
     }
 }

@@ -156,10 +156,11 @@ C:\Users\intel\source\repos\Shop\ShopUI\bin\Debug\netcoreapp3.1\zh-Hant\Microsof
 C:\Users\intel\source\repos\Shop\ShopUI\obj\Debug\netcoreapp3.1\Razor\Pages\Admin\Orders.cshtml.g.cs
 C:\Users\intel\source\repos\Shop\ShopUI\obj\Debug\netcoreapp3.1\Razor\Pages\Admin\Stock.cshtml.g.cs
 C:\Users\intel\source\repos\Shop\ShopUI\obj\Debug\netcoreapp3.1\Razor\Pages\Product.cshtml.g.cs
-C:\Users\intel\source\repos\Shop\ShopUI\obj\Debug\netcoreapp3.1\ShopUI.csproj.CoreCompileInputs.cache
-C:\Users\intel\source\repos\Shop\ShopUI\obj\Debug\netcoreapp3.1\ShopUI.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\intel\source\repos\Shop\ShopUI\obj\Debug\netcoreapp3.1\Razor\Pages\Cart.cshtml.g.cs
 C:\Users\intel\source\repos\Shop\ShopUI\obj\Debug\netcoreapp3.1\Razor\Pages\Components\Cart\Default.cshtml.g.cs
 C:\Users\intel\source\repos\Shop\ShopUI\obj\Debug\netcoreapp3.1\Razor\Pages\Components\Cart\Small.cshtml.g.cs
 C:\Users\intel\source\repos\Shop\ShopUI\obj\Debug\netcoreapp3.1\Razor\Pages\CheckOut\CustomerInformation.cshtml.g.cs
 C:\Users\intel\source\repos\Shop\ShopUI\obj\Debug\netcoreapp3.1\Razor\Pages\CheckOut\Payment.cshtml.g.cs
+C:\Users\intel\source\repos\Shop\ShopUI\bin\Debug\netcoreapp3.1\Stripe.net.dll
+C:\Users\intel\source\repos\Shop\ShopUI\obj\Debug\netcoreapp3.1\ShopUI.csproj.CoreCompileInputs.cache
+C:\Users\intel\source\repos\Shop\ShopUI\obj\Debug\netcoreapp3.1\ShopUI.MvcApplicationPartsAssemblyInfo.cache
