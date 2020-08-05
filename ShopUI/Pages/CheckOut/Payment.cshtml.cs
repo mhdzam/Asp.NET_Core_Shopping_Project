@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.Extensions.Configuration;
 using Shop.Application.Cart;
+using Shop.Application.Orders;
 using Shop.Database;
 using Stripe;
 
@@ -44,7 +45,7 @@ namespace ShopUI.Pages.CheckOut
 
         }
 
-        public IActionResult OnPost(string stripeEmail, string stripeToken)
+        public async Task<IActionResult> OnPost(string stripeEmail, string stripeToken)
         {
 
             var customers = new CustomerService();
@@ -66,6 +67,27 @@ namespace ShopUI.Pages.CheckOut
                 Description = "Shop Pruchase",
                 Currency = "gbp",
                 Customer = customer.Id
+            });
+
+
+            // Create Order
+
+            await new CreateOrder(_ctx).Do(new CreateOrder.Request
+            {
+                Address1 = CartOrder.customerinformation.Address1,
+                Address2 = CartOrder.customerinformation.Address2,
+                City = CartOrder.customerinformation.City,
+                Email = CartOrder.customerinformation.Email,
+                FirstName = CartOrder.customerinformation.FirstName,
+                LastName = CartOrder.customerinformation.LastName,
+                PhoneNumber = CartOrder.customerinformation.PhoneNumber,
+                PostalCode = CartOrder.customerinformation.PostalCode,
+                StripeReference = charge.OrderId,
+                 Stocks = CartOrder.PRoducts.Select(X => new CreateOrder.Stuck
+                 {
+                     Qty = X.Qty,
+                      StuckId = X.StockId
+                 }).ToList()
             });
 
             return Page();  // View();
