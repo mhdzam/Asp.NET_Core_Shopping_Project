@@ -17,6 +17,7 @@ namespace Shop.Database
         public DbSet<Stock> Stock { get; set; }
         public DbSet<Order> Orders { get; set; }
         public DbSet<OrderStuck> OrderStucks { get; set; }
+        public DbSet<StockOnHold> StocskOnHold { get; set; }
 
         protected override void OnModelCreating(ModelBuilder builder)
         {
