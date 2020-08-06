@@ -38,6 +38,12 @@ namespace Shop.Application.Orders
         }
         public async Task<bool> Do(Request request)
         {
+            var StocksToUpdate = _ctx.Stock.AsEnumerable().Where(X => request.Stocks.Any(y => y.StuckId ==X.Id)).ToList();
+
+            foreach(var stock in StocksToUpdate)
+            {
+                stock.Qty -= request.Stocks.FirstOrDefault(X => X.StuckId == stock.Id).Qty;
+            }
 
             var order = new Order
             { OrderRef = CreateOrderReference(),

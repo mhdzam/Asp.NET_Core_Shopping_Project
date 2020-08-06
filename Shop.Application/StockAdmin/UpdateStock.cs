@@ -23,7 +23,8 @@ namespace Shop.Application.StockAdmin
                 stocks.Add(new Stock() { 
                  Description = stock.Description,
                   ProductId = stock.ProductId,
-                   Qty = stock.Qty
+                   Qty = stock.Qty,
+                    Id = stock.Id
                 });
             }
 

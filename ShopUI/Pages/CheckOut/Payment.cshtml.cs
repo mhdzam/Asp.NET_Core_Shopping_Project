@@ -29,7 +29,7 @@ namespace ShopUI.Pages.CheckOut
 
         public IActionResult OnGet()
         {
-            var CartOrder = new GetOrder(HttpContext.Session, _ctx).Do();
+            var CartOrder = new Shop.Application.Cart.GetOrder(HttpContext.Session, _ctx).Do();
             TotalPayment = CartOrder.GetTotalCharge();
 
             var information = new GetCustomerInformation(HttpContext.Session).Do();
@@ -58,7 +58,7 @@ namespace ShopUI.Pages.CheckOut
                 Source = stripeToken
             });
 
-            var CartOrder = new GetOrder(HttpContext.Session, _ctx).Do();
+            var CartOrder = new Shop.Application.Cart.GetOrder(HttpContext.Session, _ctx).Do();
             TotalPayment = CartOrder.GetTotalCharge();
 
             var charge = charges.Create(new ChargeCreateOptions
@@ -82,7 +82,7 @@ namespace ShopUI.Pages.CheckOut
                 LastName = CartOrder.customerinformation.LastName,
                 PhoneNumber = CartOrder.customerinformation.PhoneNumber,
                 PostalCode = CartOrder.customerinformation.PostalCode,
-                StripeReference = charge.OrderId,
+                StripeReference = charge.Id,
                  Stocks = CartOrder.PRoducts.Select(X => new CreateOrder.Stuck
                  {
                      Qty = X.Qty,

@@ -1,0 +1,28 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.RazorPages;
+using Shop.Application.Orders;
+using Shop.Database;
+
+namespace ShopUI.Pages
+{
+    public class OrderModel : PageModel
+    {
+        private ApplicationDbContext _ctx;
+
+        public OrderModel(ApplicationDbContext ctx)
+        {
+            _ctx = ctx;
+        }
+
+        public GetOrder.Respone Order { set; get; }
+        public void OnGet(string reference)
+        {
+           Order = new GetOrder(_ctx).Do(reference);
+
+        }
+    }
+}

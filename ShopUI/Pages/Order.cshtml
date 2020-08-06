@@ -1,0 +1,19 @@
+﻿@page "{reference}"
+@model ShopUI.Pages.OrderModel
+@{
+    ViewData["Title"] = "Order";
+}
+
+<h1>Order</h1>
+
+<div>
+    <h1>
+        @Model.Order.OrderRef
+    </h1>
+    @foreach(var product in Model.Order.Products)
+    {
+        <div>
+            @product.Name - @product.Description - @product.Value
+        </div>
+    }
+</div>

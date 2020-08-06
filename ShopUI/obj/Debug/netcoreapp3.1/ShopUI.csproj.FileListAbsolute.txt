@@ -164,3 +164,4 @@ C:\Users\intel\source\repos\Shop\ShopUI\obj\Debug\netcoreapp3.1\Razor\Pages\Chec
 C:\Users\intel\source\repos\Shop\ShopUI\bin\Debug\netcoreapp3.1\Stripe.net.dll
 C:\Users\intel\source\repos\Shop\ShopUI\obj\Debug\netcoreapp3.1\ShopUI.csproj.CoreCompileInputs.cache
 C:\Users\intel\source\repos\Shop\ShopUI\obj\Debug\netcoreapp3.1\ShopUI.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\intel\source\repos\Shop\ShopUI\obj\Debug\netcoreapp3.1\Razor\Pages\Order.cshtml.g.cs
