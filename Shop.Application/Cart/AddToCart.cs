@@ -25,6 +25,9 @@ namespace Shop.Application.Cart
 
         public async Task<bool> Do(Request request)
         {
+            // get all items in the stock for the current user
+            var StockTOnHoldupdateEXPDate = _ctx.StocskOnHold.Where(X => X.SessionId == _session.Id).ToList();
+
             var StockToHold = _ctx.Stock.Where(X => X.Id == request.StockId).FirstOrDefault();
 
             if(StockToHold.Qty < request.Qty)
@@ -36,11 +39,17 @@ namespace Shop.Application.Cart
             _ctx.StocskOnHold.Add(new StockOnHold
             {
                 StockId = StockToHold.Id,
+                 SessionId = _session.Id,
                 Qty = request.Qty,
                 ExpiryDate = DateTime.Now.AddMinutes(20) // it will holded for just 20 minutes !
             });
 
             StockToHold.Qty -= request.Qty;   // subtracting the holded qty !
+
+            foreach(var stock in StockTOnHoldupdateEXPDate)
+            {
+                stock.ExpiryDate = DateTime.Now.AddMinutes(20);
+            }
 
             await _ctx.SaveChangesAsync();
 

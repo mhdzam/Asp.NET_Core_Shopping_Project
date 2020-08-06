@@ -69,12 +69,14 @@ namespace ShopUI.Pages.CheckOut
                 Customer = customer.Id
             });
 
+            var sessionId = HttpContext.Session.Id;
 
             // Create Order
 
             await new CreateOrder(_ctx).Do(new CreateOrder.Request
             {
                 Address1 = CartOrder.customerinformation.Address1,
+                SessionId = sessionId,
                 Address2 = CartOrder.customerinformation.Address2,
                 City = CartOrder.customerinformation.City,
                 Email = CartOrder.customerinformation.Email,
@@ -83,11 +85,11 @@ namespace ShopUI.Pages.CheckOut
                 PhoneNumber = CartOrder.customerinformation.PhoneNumber,
                 PostalCode = CartOrder.customerinformation.PostalCode,
                 StripeReference = charge.Id,
-                 Stocks = CartOrder.PRoducts.Select(X => new CreateOrder.Stuck
-                 {
-                     Qty = X.Qty,
-                      StuckId = X.StockId
-                 }).ToList()
+                Stocks = CartOrder.PRoducts.Select(X => new CreateOrder.Stuck
+                {
+                    Qty = X.Qty,
+                    StuckId = X.StockId
+                }).ToList()
             });
 
             return Page();  // View();
